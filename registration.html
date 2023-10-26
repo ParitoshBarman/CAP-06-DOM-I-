@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+	<input type="text" name="name" id="name" placeholder="Name">
+	<select id="gender">
+		<option value="">Select--Gender</option>
+		<option value="male">M</option>
+		<option value="female">F</option>
+	</select>
+	<input type="text" name="email" id="email" placeholder="email">
+	<input type="text" name="mobile" id="mobile" placeholder="Phone Number">
+	<hr>
+	<h1 id="dName">NAME</h1>
+	<h2 id="dGender">GENDER</h2>
+	<h3 id="dEmail">EMAIL</h3>
+	<h4 id="dMobile">MOBILE</h4>
+	<hr>
+	<button onclick="showName()">NAME</button>
+	<button onclick="showGender()">GENDER</button>
+	<button onclick="showEmail()">EMAIL</button>
+	<button onclick="showMobile()">MOBILE</button>
+	<button onclick="resetForm()">RESET FORM</button>
+	<button onclick="resetDisplay()">RESET DISPLAY</button>
+	<script type="text/javascript">
+		function showName() {
+			// Show filled name inside h1
+            let name_h1_element = document.getElementById("dName");
+            let name_input_element = document.getElementById("name");
+            name_h1_element.innerText = `NAME: ${name_input_element.value}`;
+		}
+
+		function showGender() {
+			// Show the selected gender inside h2
+            let gender_h2_element = document.getElementById("dGender");
+            let gender_input_element = document.getElementById("gender");
+            gender_h2_element.innerText = `GENDER: ${gender_input_element.value}`;
+		}
+
+		function showEmail() {
+			// Show the filled email inside h3
+            let email_h3_element = document.getElementById("dEmail");
+            let email_input_element = document.getElementById("email");
+            email_h3_element.innerText = `EMAIL: ${email_input_element.value}`;
+		}
+
+		function showMobile() {
+			// Show the filled mobile inside h4
+            let mobile_h4_element = document.getElementById("dMobile");
+            let mobile_input_element = document.getElementById("mobile");
+            mobile_h4_element.innerText = `MOBILE: ${mobile_input_element.value}`;
+		}
+
+		function resetForm() {
+			// Reset all the form elements to default values (blank "")
+            document.getElementById("name").value = "";
+            document.getElementById("gender").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("mobile").value = "";
+		}
+
+		function resetDisplay() {
+			// Reset all the headings (h1, h2, h3, h4) to blank values
+            document.getElementById("dName").innerText = "NAME";
+            document.getElementById("dGender").innerText = "GENDER";
+            document.getElementById("dEmail").innerText = "EMAIL";
+            document.getElementById("dMobile").innerText = "MOBILE";
+		}
+	</script>
+</body>
+</html>

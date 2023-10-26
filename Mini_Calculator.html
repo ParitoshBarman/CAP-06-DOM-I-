@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calculator</title>
+    
+</head>
+<body>
+    <div style="width: 55%;margin: auto;margin-top: 100px;">
+        <input type="number" id="frstNum">&nbsp;&nbsp;<input type="number" id="secndNum"><br><br>
+        <button onclick="addFunc()">Add</button>
+        <button onclick="subtFunc()">Subtract</button>
+        <button onclick="divFunc()">Divide</button>
+        <button onclick="mulFunc()">Multiply</button>
+    </div>
+</body>
+
+<script>
+    let firstNum = document.getElementById("frstNum");
+    let secondNum = document.getElementById("secndNum");
+
+    function addFunc(){
+        window.alert(`Addition of ${firstNum.value} and ${secondNum.value} is ==> ${Number(firstNum.value) + Number(secondNum.value)}`)
+    }
+
+    function subtFunc(){
+        window.alert(`Subtraction of ${firstNum.value} and ${secondNum.value} is ==> ${Number(firstNum.value) - Number(secondNum.value)}`)
+    }
+
+    function divFunc(){
+        window.alert(`Division of ${firstNum.value} and ${secondNum.value} is ==> ${Number(firstNum.value) / Number(secondNum.value)}`)
+    }
+
+    function mulFunc(){
+        window.alert(`Multiplication of ${firstNum.value} and ${secondNum.value} is ==> ${Number(firstNum.value) * Number(secondNum.value)}`)
+    }
+
+</script>
+</html>
